@@ -98,6 +98,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func accessCamera(){
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             imagePickerController.sourceType = .camera
+            present(imagePickerController, animated: true, completion: nil)
         }
         else{
             showAlert(title: "Camera Not Available", message: "There is no camera available on this device")
